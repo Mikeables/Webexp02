@@ -1,0 +1,60 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* 动画容器样式 */
+#animation-container {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 消息容器样式 */
+#message-container {
+    width: 800px;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    position: absolute; /* 绝对定位 */
+    z-index: 3; /* 确保消息容器的z-index大于图片的z-index */
+}
+
+/* 图片样式 */
+#current-scene-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* 图片的z-index值小于消息容器的z-index */
+}
+
+/* 虚拟键盘样式 */
+#virtual-keyboard {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    z-index: 2; /* 虚拟键盘的z-index值可以保持不变，因为它在消息容器之下 */
+}
+
+#virtual-keyboard button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
